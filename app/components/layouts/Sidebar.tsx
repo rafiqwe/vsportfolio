@@ -1,34 +1,59 @@
 "use client";
 
+import { useState } from "react";
+import SideList from "./SideList";
+import Explorer from "../explorer/Explorer";
+import Contact from "@/app/components/contact/page";
+import Skills from "../skill/Skill";
+import About from "../about/About";
+import Service from "../service/service";
+import Project from "../projects/Project";
+
 export default function Sidebar() {
+  const [sideTap, setsideTap] = useState("file");
+  const [IsSideTapOpen, setIsSideTapOpen] = useState(false);
+
+  const handleTapWeight = (tap: string) => {
+    if (sideTap === tap) {
+      setIsSideTapOpen(!IsSideTapOpen);
+      return;
+    }
+    setsideTap(tap);
+    setIsSideTapOpen(false);
+  };
+
   return (
-    <div className="w-[250px] h-full bg-[#252526] border-r border-[#3c3c3c] flex flex-col">
-      {/* Explorer Header */}
-      <div className="p-3 uppercase text-xs tracking-wider text-gray-400">
-        Explorer
+    <aside
+      className="
+        w-[320px]
+        h-full
+        bg-[var(--sidebar-bg)]
+        border-r border-[var(--border-color)]
+        flex flex-col
+        select-none
+        font-sans
+      "
+    >
+      <div className="flex w-full h-full  ">
+        <div className="w-[25%] h-full border-r border-[var(--border-color)] flex flex-col items-center pt-4 ">
+          <SideList
+            setTap={setsideTap}
+            Tap={sideTap}
+            handleTapWeight={handleTapWeight}
+          />
+        </div>
+        <div className="w-[75%]">
+          <div className="p-3">
+            {/*  file explore */}
+            {sideTap === "file" && <Explorer />}
+            {sideTap === "projects" && <Project />}
+            {sideTap === "contact" && <Contact />}
+            {sideTap === "about" && <About />}
+            {sideTap === "skills" && <Skills />}
+            {sideTap === "service" && <Service />}
+          </div>
+        </div>
       </div>
-
-      {/* File List */}
-      <div className="px-3 text-sm space-y-1">
-        <div className="text-gray-300 hover:text-white cursor-pointer">
-          about-me.md
-        </div>
-        <div className="text-gray-300 hover:text-white cursor-pointer">
-          skills.js
-        </div>
-        <div className="text-gray-300 hover:text-white cursor-pointer">
-          contact.json
-        </div>
-
-        {/* Projects Folder */}
-        <div className="mt-3 text-gray-400 uppercase text-xs">Projects</div>
-        <div className="text-gray-300 hover:text-white cursor-pointer ml-3">
-          ecommerce-app.md
-        </div>
-        <div className="text-gray-300 hover:text-white cursor-pointer ml-3">
-          chat-app.ts
-        </div>
-      </div>
-    </div>
+    </aside>
   );
 }
