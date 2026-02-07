@@ -10,24 +10,28 @@ export default function HomePage() {
       href: "/skills",
       icon: <FolderOpen size={16} />,
       title: "Open Skills",
+      name: "Skill",
       desc: "View frontend, backend & tools",
     },
     {
       href: "/projects",
       icon: <FolderOpen size={16} />,
       title: "Open Projects",
+      name: "Projects",
       desc: "Browse selected work",
     },
     {
       href: "/about",
       icon: <User size={16} />,
       title: "About Me",
+      name: "About Me",
       desc: "Who I am & how I work",
     },
     {
       href: "/contact",
       icon: <Mail size={16} />,
       title: "Contact",
+      name: "Contact",
       desc: "Get in touch",
     },
   ];
@@ -38,7 +42,9 @@ export default function HomePage() {
         <div className="flex flex-col justify-center gap-4">
           <div className="flex items-center gap-3">
             <Code className="text-[var(--accent)]" size={28} />
-            <h1 className="md:text-2xl text-xl font-semibold">Visual Studio Code</h1>
+            <h1 className="md:text-2xl text-xl font-semibold">
+              Visual Studio Code
+            </h1>
           </div>
 
           <p className="text-sm text-[var(--text-muted)]">
@@ -72,6 +78,7 @@ export default function HomePage() {
                 icon={action.icon}
                 title={action.title}
                 desc={action.desc}
+                name={action.name}
               />
             );
           })}
@@ -80,4 +87,3 @@ export default function HomePage() {
     </div>
   );
 }
-
