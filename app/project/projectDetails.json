@@ -1,0 +1,136 @@
+{
+  "projects": [
+    {
+      "id": "devguide",
+      "title": "DevGuide",
+      "description": "A developer-focused platform that provides guides, best practices, and structured learning resources for modern web development.",
+      "techStack": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Youtube API"
+      ],
+      "screenshots": [
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770127144/devguide2_iuavhz.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552336/devguidep_nauhlh.webp"
+      ],
+      "category": "Developer Platform",
+      "features": [
+        "Structured developer guides",
+        "Clean documentation UI",
+        "Scalable content architecture"
+      ],
+      "liveUrl": "https://devguide-dev.vercel.app",
+      "githubUrl": "https://github.com/rafiqwe/DevGuide",
+      "status": "Completed",
+      "year": 2025
+    },
+    {
+      "id": "bgift-social",
+      "title": "Bgift – Social Media Platform",
+      "description": "A social media platform concept focused on user interaction, content sharing, and modern UI/UX patterns.",
+      "techStack": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "prisma",
+        "Neon DB",
+        "NextAuth",
+        "Tailwind CSS",
+        "GSAP",
+        "Socket.io",
+        "Cloudinary",
+        "TypeScript"
+      ],
+      "category": "Full Stack / Social Media",
+      "features": [
+        "User authentication",
+        "Post creation & sharing",
+        "Post like & comment",
+        "Responsive social feed",
+        "Modern UI components",
+        "Notification system",
+        "Real-time updates",
+        "Real Time Chat & Notification Systems"
+      ],
+      "screenshots": [
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552340/bgift_d6myue.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770127570/bgift2_wxtlzn.webp"
+      ],
+      "liveUrl": "https://bgift-social-media.vercel.app",
+      "githubUrl": "https://github.com/rafiqwe/bgift-social-media",
+      "status": "In Progress",
+      "year": 2025
+    },
+    {
+      "id": "vs-portfolio",
+      "title": "VS Code Style Developer Portfolio",
+      "description": "A developer portfolio inspired by Visual Studio Code. The website mimics a real VS Code workspace with tabs, sidebar, editor, and markdown preview.",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Monaco Editor"
+      ],
+      "category": "Frontend / Full Stack",
+      "features": [
+        "VS Code–like UI",
+        "Dynamic tabs system",
+        "Markdown preview",
+        "Theme support"
+      ],
+      "screenshots": [
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770128621/vscodepo_rdkcmm.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770128620/vscodepo2_klcx9g.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770128621/vscodepo3_awoxm8.webp"
+
+      ],
+      "liveUrl": "https://your-portfolio.vercel.app",
+      "githubUrl": "https://github.com/rafiqwe/vscode-portfolio",
+      "status": "Active",
+      "year": 2026
+    },
+    {
+      "id": "genai",
+      "title": "GenAI code genarator",
+      "description": "GenAI helps developers instantly generate React & Next.js components, accelerate SaaS development, and build production-ready code with AI.",
+      "techStack": [
+        "React",
+        "JavaScript",
+        "Gemini AI",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JWT"
+      ],
+      "category": "Gen AI / Full Stack",
+      "features": [
+        "Prompt-based generation",
+        "Dynamic UI rendering",
+        "Reusable components",
+        "Authentication",
+        "Authorization",
+        "Real-time updates",
+        "Generate code & update and preview real time",
+        "Responsive design",
+        "Cross-platform compatibility"
+      ],
+      "screenshots": [
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552333/genai_2_liwnfn.webp",
+         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770128039/screenshot_1.5x_postspark_2026-02-03_20-10-28_zqdkb1.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770128040/screenshot_1.5x_postspark_2026-02-03_20-11-43_fijaxi.webp"
+       
+      ],
+      "liveUrl": "https://genai-dev.vercel.app",
+      "githubUrl": "https://github.com/rafiqwe/genai-project",
+      "status": "Completed",
+      "year": 2025
+    }
+  ]
+}
