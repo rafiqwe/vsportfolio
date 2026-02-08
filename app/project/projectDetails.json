@@ -111,15 +111,16 @@
       ],
       "category": "Gen AI / Full Stack",
       "features": [
-        "Prompt-based generation",
-        "Dynamic UI rendering",
-        "Reusable components",
-        "Authentication",
-        "Authorization",
-        "Real-time updates",
-        "Generate code & update and preview real time",
-        "Responsive design",
-        "Cross-platform compatibility"
+      "Prompt-driven AI code generation",
+      "Instant React & Next.js component output",
+      "Live preview rendering environment",
+      "Editable generated code workspace",
+      "Reusable component export support",
+      "Secure authentication & authorization",
+      "Session-based user workflow",
+      "Real-time UI updates",
+      "Responsive cross-device interface",
+      "Scalable API-driven backend architecture"
       ],
       "screenshots": [
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552333/genai_2_liwnfn.webp",
@@ -129,6 +130,39 @@
       ],
       "liveUrl": "https://genai-dev.vercel.app",
       "githubUrl": "https://github.com/rafiqwe/genai-project",
+      "status": "Completed",
+      "year": 2025
+    },
+       {
+      "id": "crypto-wallet",
+      "title": "Crypto Wallet",
+      "description": "Crypto Wallet is a landing page for crypto wallet.",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP",
+        "Gsap ScrollTrigger",
+        "Lenis"
+      ],
+      "category": "Landing Page / Frontend",
+      "features": [
+        "Landing page",
+        "Dynamic UI rendering",
+        "Reusable components",
+        "Responsive design",
+        "Scroll animation",
+        "ScrollTrigger animation",
+        "Lenis animation"
+      ],
+      "screenshots": [
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770564791/screenshot_1.5x_postspark_2026-02-08_21-28-30_vawimm.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770564791/screenshot_1.5x_postspark_2026-02-08_21-29-23_kmxrjr.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1770565003/screenshot_1.5x_postspark_2026-02-08_21-36-19_mlj39f.webp"
+      ],
+      "liveUrl": "https://crypto-walet.vercel.app",
+      "githubUrl": "https://github.com/rafiqwe/crypto-wallet",
       "status": "Completed",
       "year": 2025
     }
