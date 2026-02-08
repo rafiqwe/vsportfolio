@@ -10,7 +10,7 @@ const Terminal = () => {
     "",
   ]);
   const [input, setInput] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [height, setHeight] = useState(300);
   const scrollRef = useRef<HTMLDivElement>(null);
   const resizeRef = useRef<HTMLDivElement>(null);
