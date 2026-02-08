@@ -6,7 +6,7 @@ import Folder from "../UI/Folder";
 
 const Skills = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full">
       <Folder name="Skills" link="/skills" />
     </div>
   );
