@@ -133,10 +133,10 @@
       "status": "Completed",
       "year": 2025
     },
-       {
+    {
       "id": "crypto-wallet",
       "title": "Crypto Wallet",
-      "description": "Crypto Wallet is a landing page for crypto wallet.",
+      "description": "The Crypto Wallet Frontend showcases a professional wallet Landng page with interactive components. It is designed to simulate real-world crypto applications while maintaining performance, accessibility, and scalability standards..",
       "techStack": [
         "Next.js",
         "React",
