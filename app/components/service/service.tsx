@@ -3,8 +3,8 @@ import Folder from '../UI/Folder'
 
 const Service = () => {
   return (
-    <div className='w-full h-full'>
-       <Folder name='Services' link='/service' />
+    <div className='w-full'>
+       <Folder name='Service' link='/service' />
     </div>
   )
 }
