@@ -1,5 +1,5 @@
 "use client";
-import useTaps from "@/app/hook/use-Taps";
+import { useTabs } from "@/app/context/TabContext";
 import Link from "next/link";
 import React from "react";
 import { FaFolder, FaFolderOpen, FaReact } from "react-icons/fa";
@@ -15,11 +15,15 @@ const Folder = ({
   from?: string;
 }) => {
   const [openFolders, setOpenFolders] = React.useState<boolean>(false);
-  const { addTap } = useTaps();
+  const { addTab } = useTabs();
 
   return (
     <div className="w-full h-full">
-      {from === "project" ? "" : <h1 className="text-sm font-bold">{name}</h1>}
+      {from === "project" || from === "app" ? (
+        ""
+      ) : (
+        <h1 className="text-sm font-bold">{name}</h1>
+      )}
       <div
         onClick={() => setOpenFolders(!openFolders)}
         className="flex items-center gap-2 py-1 rounded hover:bg-white/5 cursor-pointer border-l border-[var(--border-color)] h-full"
@@ -41,7 +45,7 @@ const Folder = ({
         </div>
       </div>
       {openFolders && (
-        <div className="pl-3" onClick={() => addTap(name!, link)}>
+        <div className="pl-3" onClick={() => addTab(name!, link)}>
           <Link href={link} className="flex items-center gap-2">
             <p className="border-l pl-6 border-[var(--border-color)]">
               <FaReact size={15} color="#008BFF" />
