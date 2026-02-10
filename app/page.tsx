@@ -10,7 +10,7 @@ export default function HomePage() {
       href: "/skills",
       icon: <FolderOpen size={16} />,
       title: "Open Skills",
-      name: "Skill",
+      name: "Skills",
       desc: "View frontend, backend & tools",
     },
     {
