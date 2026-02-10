@@ -10,50 +10,43 @@ import Service from "../service/service";
 import Project from "../projects/Project";
 
 export default function Sidebar() {
-  const [sideTap, setsideTap] = useState("file");
-  const [IsSideTapOpen, setIsSideTapOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<string | null>(null);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
 
-  const handleTapWeight = (tap: string) => {
-    if (sideTap === tap) {
-      setIsSideTapOpen(!IsSideTapOpen);
+  const handleIconClick = (tab: string) => {
+    // If clicking the same tab → toggle panel
+    if (activeTab === tab) {
+      setIsPanelOpen((prev) => !prev);
       return;
     }
-    setsideTap(tap);
-    setIsSideTapOpen(false);
+
+    // If clicking a new tab → open panel
+    setActiveTab(tab);
+    setIsPanelOpen(true);
   };
 
   return (
-    <aside
-      className="
-        w-[320px]
-        h-full
-        bg-[var(--sidebar-bg)]
-        border-r border-[var(--border-color)]
-        flex flex-col
-        select-none
-        font-sans
-      "
-    >
-      <div className="flex w-full h-full  ">
-        <div className="w-[25%] h-full border-r border-[var(--border-color)] flex flex-col items-center pt-4 ">
-          <SideList
-            setTap={setsideTap}
-            Tap={sideTap}
-            handleTapWeight={handleTapWeight}
-          />
-        </div>
-        <div className="w-[75%]">
-          <div className="p-3">
-            {/*  file explore */}
-            {sideTap === "file" && <Explorer />}
-            {sideTap === "projects" && <Project />}
-            {sideTap === "contact" && <Contact />}
-            {sideTap === "about" && <About />}
-            {sideTap === "skills" && <Skills />}
-            {sideTap === "service" && <Service />}
-          </div>
-        </div>
+    <aside className="h-full flex bg-[var(--sidebar-bg)] border-r border-[var(--border-color)]">
+      {/* ================= ICON BAR ================= */}
+      <div className="w-[64px] border-r border-[var(--border-color)] flex flex-col items-center pt-4">
+        <SideList
+          Tab={activeTab}
+          setTab={() => {}}
+          handleTabClick={handleIconClick}
+        />
       </div>
+
+      {/* ================= PANEL ================= */}
+      {isPanelOpen && activeTab && (
+        <div className="w-[256px] p-3 h-full ">
+          {activeTab === "file" && <Explorer />}
+          {activeTab === "projects" && <Project />}
+          {activeTab === "contact" && <Contact />}
+          {activeTab === "about" && <About />}
+          {activeTab === "skills" && <Skills />}
+          {activeTab === "service" && <Service />}
+        </div>
+      )}
     </aside>
   );
 }
