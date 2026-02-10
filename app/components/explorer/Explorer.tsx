@@ -7,8 +7,11 @@ import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { SiEslint, SiPostcss, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import Folder from "../UI/Folder";
+import { useTabs } from "@/app/context/TabContext";
 
 const Explorer = () => {
+  const { addTab } = useTabs();
+
   const Folders = [
     {
       Names: "app",
@@ -81,7 +84,7 @@ const Explorer = () => {
     <div className="select-none font-mono">
       <h1 className="text-sm font-bold mb-2">Explorer</h1>
 
-      <Folder name="app" link="/"  from="app"/>
+      <Folder name="app" link="/" from="app" />
 
       <div
         onClick={() => toggleFolder("public")}
@@ -110,6 +113,7 @@ const Explorer = () => {
           <div
             key={index}
             className="flex items-center gap-2 py-1 pl-5 rounded hover:bg-white/5 cursor-pointer"
+            onClick={() => addTab(file.name, file.link)}
           >
             <Link href={file?.link}>
               <div className="flex items-center gap-1.5 ">
