@@ -9,12 +9,12 @@ import {
 import { MdContactPage } from "react-icons/md";
 
 interface SideListProps {
-  setTap: (tap: string) => void;
-  handleTapWeight: (tap: string) => void;
-  Tap: string;
+  setTab: (tab: string | null) => void;
+  handleTabClick: (tab: string) => void;
+  Tab: string | null;
 }
 
-const SideList = ({ setTap, handleTapWeight, Tap }: SideListProps) => {
+const SideList = ({ setTab, handleTabClick, Tab }: SideListProps) => {
   const list = [
     { icon: <Files />, name: "file" },
     { icon: <MdContactPage size={25} />, name: "contact" },
@@ -29,9 +29,9 @@ const SideList = ({ setTap, handleTapWeight, Tap }: SideListProps) => {
         {list.map((item, index) => (
           <li
             onClick={() => {
-              handleTapWeight(item.name);
+              handleTabClick(item.name);
             }}
-            className={`${item.name === "about" ? "rotate-180" : ""}  ${Tap === item.name ? "bg-[var(--tabs-bg)]" : ""} cursor-pointer hover:bg-[var(--tabs-bg)] text-[#008BFF]  p-2 rounded-md`}
+            className={`${item.name === "about" ? "rotate-180" : ""}  ${Tab === item.name ? "bg-[var(--tabs-bg)]" : ""} cursor-pointer hover:bg-[var(--tabs-bg)] text-[#008BFF]  p-2 rounded-md`}
             key={index}
           >
             {item.icon}
