@@ -12,7 +12,7 @@ const PreviewReadMe = ({ readme }: { readme: string }) => {
 
   return (
     <>
-      <div className="h-[35px] absolute top-8 left-0 w-full flex items-center gap-2 px-3 border-b border-[var(--border-color)] bg-[var(--tabs-bg)] text-xs">
+      <div className="h-[35px] absolute top-0 left-0 w-full flex items-center gap-2 px-3 border-b border-[var(--border-color)] bg-[var(--tabs-bg)] text-xs z-10">
         <button
           onClick={() => setView("editor")}
           className={`px-2 py-1 rounded ${
@@ -41,7 +41,7 @@ const PreviewReadMe = ({ readme }: { readme: string }) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden markdown-preview mt-10">
+      <div className="flex flex-1 overflow-hidden markdown-preview mt-8">
         {/* Editor */}
         {(view === "editor" || view === "split") && (
           <div className={view === "split" ? "w-1/2" : "w-full"}>
