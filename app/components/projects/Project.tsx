@@ -18,6 +18,10 @@ const Project = () => {
       name: "vs-portfolio",
       link: "/project/vs-portfolio",
     },
+    {
+      name: "crypto-wallet",
+      link: "/project/crypto-wallet",
+    },
   ];
   return (
     <div>
