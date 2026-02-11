@@ -9,6 +9,7 @@ import StatusBar from "./components/layouts/StatusBar";
 import EditorTab from "./components/editorTab/EditorTab";
 import { TabProvider } from "./context/TabContext";
 import Terminal from "./components/terminal/Terminal";
+import muhammadrabbiImage from "@/public/muhammadrabbi.webp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,16 +52,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Muhammad Rabbi" }],
   creator: "Muhammad Rabbi",
-  metadataBase: new URL("https://muhammadrabbi.vercel.app"),
+  metadataBase: new URL("https://muhammadrabbidev.vercel.app"),
   openGraph: {
     title: "Muhammad Rabbi | Full-Stack Developer",
     description:
       "VS Code–style portfolio showcasing projects, skills, and experiments in modern web development.",
-    url: "https://muhammadrabbi.vercel.app",
+    url: "https://muhammadrabbidev.vercel.app",
     siteName: "Muhammad Rabbi Portfolio",
     images: [
       {
-        url: "/muhammadrabbi.webp",
+        url: muhammadrabbiImage.src,
         width: 1200,
         height: 630,
         alt: "Muhammad Rabbi Portfolio",
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
     title: "Muhammad Rabbi | Full-Stack Developer",
     description:
       "Frontend-focused full-stack developer building clean UI and real-world products.",
-    images: ["/muhammadrabbi.webp"],
+    images: [muhammadrabbiImage.src],
   },
   robots: {
     index: true,
